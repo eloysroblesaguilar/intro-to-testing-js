@@ -31,5 +31,17 @@ function isVowel (x) {
         return x === 'a' || x === 'e' || x === 'i' || x === 'o' || x === 'u' || x === 'A' || x === 'E' || x === 'I' || x === 'O' || x === 'U' ;
 }
 
-console.log(isVowel(false));
-console.log(isVowel(4));
+// console.log(isVowel(false));
+// console.log(isVowel(4));
+
+function add (x,y) {
+    x = parseInt(x);
+    y = parseInt(y);
+    if (isNaN(x) === true || isNaN(y) === true) {
+        return "This is not a number.";
+    } else {
+        return (x + y);
+    }
+}
+// console.log(add("banana","split"));
+console.log(NaN + NaN);

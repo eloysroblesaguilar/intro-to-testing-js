@@ -159,3 +159,40 @@ describe('isVowel', function(){
         expect(isVowel()).toBe(false);
     });
 })
+
+/** The add function should sum two numbers, as long as each input is a number or a string containing a number.
+    Write each assertion, confirm the test fails, write only enough code to green that specific test, refactor, then repeat (move onto the next test.)
+Assert that add:
+    add(2, 3) returns 5
+add(-3, -9) returns -12
+add("5", 6) returns 11
+add("-4", "10") returns 6
+add("banana", "split") returns NaN
+add(2, "apples") returns NaN
+add() returns NaN
+Start with the smallest tests first.
+    Write just enough code to green the test
+Build up functionality one small piece at a time.
+    If any input is not a number, return NaN
+Refactor, if possible
+    Repeat until the tests are robust and the function works as intended.
+    Commit your work to git and push to GitHub. **/
+
+describe('add',function (){
+    it('should be a defined function', function () {
+        expect(typeof add).toBe('function');
+    });
+    it('should return the sum of x and y  when passed two numbers or string of numbers', function () {
+        expect(add(2, 3)).toBe(5);
+        expect(add("-4", "10")).toBe(6);
+        expect(add("5", 6)).toBe(11);
+    });
+    it('should return NaN when passed a string', function () {
+        expect(add("banana","split")).toBe("This is not a number.");
+        expect(add(2,"apples")).toBe("This is not a number.")
+    });
+    it('should return NaN when called without an argument', function () {
+        expect(add()).toBe("This is not a number.")
+    });
+})
+

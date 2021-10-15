@@ -37,11 +37,11 @@ function isVowel (x) {
 function add (x,y) {
     x = parseInt(x);
     y = parseInt(y);
-    if (isNaN(x) === true || isNaN(y) === true) {
-        return "This is not a number.";
-    } else {
+    // if (isNaN(x) === true || isNaN(y) === true) {
+    //     return "This is not a number.";
+    // } else {
         return (x + y);
     }
-}
+
 // console.log(add("banana","split"));
 console.log(NaN + NaN);

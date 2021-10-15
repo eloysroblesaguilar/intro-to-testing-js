@@ -188,11 +188,11 @@ describe('add',function (){
         expect(add("5", 6)).toBe(11);
     });
     it('should return NaN when passed a string', function () {
-        expect(add("banana","split")).toBe("This is not a number.");
-        expect(add(2,"apples")).toBe("This is not a number.")
+        expect(add("banana","split")).toBeNaN();
+        expect(add(2,"apples")).toBeNaN()
     });
     it('should return NaN when called without an argument', function () {
-        expect(add()).toBe("This is not a number.")
+        expect(add()).toBeNaN();
     });
 })
 

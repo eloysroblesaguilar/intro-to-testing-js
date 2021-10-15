@@ -63,3 +63,54 @@ describe('isFive', function (){
 
 })
 
+/** Exercise #11 TDD process for testing and creating an isEven function
+Start with the smallest tests first. Assert that the function is defined.
+    Write just enough code to green the test
+Build up functionality one small piece at a time.
+    Write each assertion, confirm the test fails, write only enough code to green that specific test, refactor, then repeat.
+    Remember to add and then "green" one test at a time. That's part of the fundamental approach of TDD.
+Assert that isEven:
+    returns a boolean no matter the input
+    returns true when executed with isEven(2)
+    returns true when executed with isEven(-4)
+    returns false when executed with isEven(3)
+    returns false when called with isEven("banana")
+    returns true when called with isEven("8")
+    returns false when called with isEven(Infinity)
+    return false when called with a boolean input like isEven(true) or isEven(false)
+    returns false when called without an argument like isEven()
+Refactor when and where you can. Be careful not to refactor before you have a handful of green tests.
+    Repeat until the tests are robust and the function works as intended.
+    Commit your work to git and push to GitHub before moving forward. **/
+
+describe('isEven',function (){
+    it('should be a defined function', function () {
+        expect(typeof isEven).toBe('function');
+    });
+    it('should return a boolean no matter the input', function () {
+        expect(typeof isEven()).toBe('boolean');
+    });
+    it('should return true when passed an even number or a string of an even number', function () {
+        expect(isEven(2)).toBe(true);
+        expect(isEven(-4)).toBe(true);
+        expect(isEven("8")).toBe(true);
+    });
+    it('should return false when passed 3', function () {
+        expect(isEven(3)).toBe(false);
+    });
+    it('should return false when passed "bannana"', function () {
+        expect(isEven("banana")).toBe(false);
+    });
+    it('should return false when passed Infinity', function () {
+        expect(isEven(Infinity)).toBe(false);
+    });
+    it('should return false when called with a boolean input', function () {
+        expect(isEven(true)).toBe(false);
+        expect(isEven(false)).toBe(false);
+    });
+    it('should return false when called with without an argument', function () {
+        expect(isEven()).toBe(false);
+    });
+
+})
+

@@ -114,3 +114,48 @@ describe('isEven',function (){
 
 })
 
+/** Exercise #12 Test Drive an isVowel function
+Start with the smallest tests first.
+    Write just enough code to green the test
+Build up functionality one small piece at a time.
+    Commit your work to git at each step.
+    Write each assertion, confirm the test fails, write only enough code to green that specific test, refactor, then repeat.
+    Remember to add and then "green" one test at a time. That's part of the fundamental approach of TDD.
+Assert that:
+    isVowel always returns a boolean
+isVowel("a") returns true
+isVowel("A") returns true
+isVowel("y") returns false
+isVowel(4) returns false
+isVowel(true) or isVowel(false) both return false
+isVowel("banana") returns false
+isVowel() returns false
+Refactor when appropriate and possible.
+    Repeat until the tests are robust and the function works as intended.
+    Commit your work to git and push to GitHub before moving forward. **/
+
+describe('isVowel', function(){
+    it('should be a defined function', function () {
+        expect(typeof isVowel).toBe('function');
+    });
+    it('should return true when passed a vowel', function () {
+        expect(isVowel('a')).toBe(true);
+        expect(isVowel('A')).toBe(true)
+    });
+    it('should return false when passed a consonant', function () {
+        expect(isVowel("y")).toBe(false);
+    });
+    it('should return false when passed a number', function () {
+        expect(isVowel(4)).toBe(false);
+    });
+    it('should return false when passed a boolean value ', function () {
+        expect(isVowel(true)).toBe(false);
+        expect(isVowel(false)).toBe(false);
+    });
+    it('should return false when passed a string', function () {
+        expect(isVowel('banana')).toBe(false);
+    });
+    it('should return false when called without an argument', function () {
+        expect(isVowel()).toBe(false);
+    });
+})
